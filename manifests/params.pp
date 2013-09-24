@@ -8,7 +8,7 @@ class dhcp::params {
       $dhcpd       = '/usr/sbin/dhcpd'
     }
     'ubuntu': {
-      if versioncmp($::operatingsystemrelease, '12.04') >= 0 {
+      if versioncmp($::lsbdistrelease, '12.04') >= 0 {
         $dhcp_dir    = '/etc/dhcp'
       } else {
         $dhcp_dir    = '/etc/dhcp3'
